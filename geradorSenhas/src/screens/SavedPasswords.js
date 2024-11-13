@@ -5,14 +5,14 @@ export default function SavedPasswords({route}) {
     const {savedPasswords} = route.params; //Recebendo as senhas salvas via parametro de navegação
 
     return(
-        <View style={StyleSheet.container}>
-            <Text style={StyleSheet.title}>Senhas Salvas</Text>
+        <View style={styles.container}>
+            <Text style={styles.title}>Senhas Salvas</Text>
             <FlatList
             data={savedPasswords}
             keyExtractor={(item, index) => index.toString()}
             renderItem={({item}) =>(
-                <View style={StyleSheet.passwordContainer}>
-                    <Text style={StyleSheet.passwordText}>{item}</Text>
+                <View style={styles.passwordContainer}>
+                    <Text style={styles.passwordText}>{item}</Text>
                 </View>
             )}
             />

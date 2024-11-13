@@ -8,6 +8,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import SavedPasswords from './src/screens/SavedPasswords'; //***Novo: Tela de senhas salvas */
 import { ModalPassword } from './src/components/modal/index';
+import SenhaForte from './src/screens/SenhaForte';
 
 let charset = "abcdefghijklmnopqrstuvwxyz!@#$%&*0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
@@ -31,6 +32,7 @@ function HomeScreen({ navigation }) {
     setSenhaGerada(senha)
     setModalVisible(true)
 
+
   }
 
   //** novo: Função para salvar senha e navegar para a tela de senhas salvas*/
@@ -44,11 +46,15 @@ function HomeScreen({ navigation }) {
   }
   //*** fim da função de salvar senha e navegar */
 
+  function SenhaForte() {
+      navigation.navigate('SenhaForte'); //Navega e passa as senhas
+    };
+  
 
   return (
     <View style={styles.container}>
       <Image
-        source={require("./src/img/logolock.png")}
+        source={require("./src/img/protecao.png")}
         style={styles.logo}
       />
 
@@ -56,6 +62,18 @@ function HomeScreen({ navigation }) {
 
       <TouchableOpacity style={styles.button} onPress={gerarSenha}>
         <Text style={styles.textButton}> Gerar Senha </Text>
+      </TouchableOpacity>
+
+      <br></br>
+
+      <TouchableOpacity style={styles.button} onPress={salvarSenha}>
+        <Text style={styles.textButton}> Senha Salva </Text>
+      </TouchableOpacity>
+
+      <br></br>
+
+      <TouchableOpacity style={styles.button} onPress={SenhaForte}>
+        <Text style={styles.textButton}> Entrar</Text>
       </TouchableOpacity>
 
       <Modal visible={modalVisible} animationType="fade" transparent={true}>
@@ -73,6 +91,7 @@ export default function App() {
       <Stack.Navigator>
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="SavedPasswords" component={SavedPasswords} />
+        <Stack.Screen name="SenhaForte" component={SenhaForte} />
       </Stack.Navigator>
     </NavigationContainer>
   )
@@ -86,7 +105,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   logo: {
-    marginBottom: 20,
+    marginBottom: 2,
+    width: 250,
+    height:250,
   },
   title: {
     fontWeight: 'bold',
@@ -94,7 +115,7 @@ const styles = StyleSheet.create({
     marginBottom: 50,
   },
   button: {
-    backgroundColor: '#333',
+    backgroundColor: '#0A3856',
     width: '70%',
     height: 50,
     alignItems: 'center',
@@ -103,7 +124,7 @@ const styles = StyleSheet.create({
     padding: 6,
   },
   textButton: {
-    color: '#FFF',
+    color: '#fff',
     fontSize: 15,
     fontWeight: 'bold',
   },
