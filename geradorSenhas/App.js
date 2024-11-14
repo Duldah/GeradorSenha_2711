@@ -58,7 +58,7 @@ function HomeScreen({ navigation }) {
         style={styles.logo}
       />
 
-      <Text style={styles.title}> LockGen </Text>
+      <Text style={styles.title}> PowerLock </Text>
 
       <TouchableOpacity style={styles.button} onPress={gerarSenha}>
         <Text style={styles.textButton}> Gerar Senha </Text>
@@ -110,6 +110,7 @@ const styles = StyleSheet.create({
     height:250,
   },
   title: {
+    color:'#0A3856',
     fontWeight: 'bold',
     fontSize: 28,
     marginBottom: 50,
@@ -130,7 +131,7 @@ const styles = StyleSheet.create({
   },
   senha: {
     marginTop: 20,
-    color: '#333',
+    color: '#0A3856',
     fontSize: 15,
     fontWeight: 'bold',
   },

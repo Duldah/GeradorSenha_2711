@@ -1,13 +1,18 @@
 import React from "react";
-import { View, Text, FlatList, StyleSheet } from "react-native";
+import { View, Text, Image, StyleSheet } from "react-native";
 
 export default function SenhaForte({ route }) {
-
   return (
     <View style={styles.container}>
       <Text style={styles.title}>
-       Qual a importância de ter uma senha forte?
+        Qual a importância de ter uma senha forte?
       </Text>
+
+      <Image
+        source={require("../img/senha.png")}
+        style={styles.logo}
+      />
+
       <Text style={styles.texto}>
         Senhas fortes são essenciais para proteger suas contas online contra ataques, 
         como os de força bruta, onde hackers tentam adivinhar sua senha automaticamente. 
@@ -18,27 +23,35 @@ export default function SenhaForte({ route }) {
         significativamente a segurança dos seus dados pessoais e financeiros.
       </Text>
     </View>
-  )
+  );
 }
-
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#F0F4F8',
     alignItems: 'center',
     justifyContent: 'center',
   },
   title: {
     fontWeight: 'bold',
     fontSize: 24,
+    color: '#0A3856', 
     marginBottom: 20,
-    padding:25,
+    paddingLeft: 25,
+    paddingRight: 25,
+  },
+  logo: {
+    width: 300,
+    height: 200,
+    marginBottom: 20,
   },
   texto: {
-    fontSize: 24,
-    marginBottom: 20,
-    padding: 25,
+    fontSize: 19,
+    color: '#0A3856',
+    paddingLeft: 25,
+    paddingRight: 25,
+    textAlign: 'justify',
   },
   passwordContainer: {
     backgroundColor: '#e0e0e0',
@@ -48,7 +61,7 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   passwordText: {
-    color: '#000',
+    color: '#0A3856', // Cor aplicada ao texto da senha
     fontSize: 16,
   },
 });

@@ -29,12 +29,13 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
     },
     title: {
+      color:'#0A3856',
       fontWeight: 'bold',
       fontSize: 24,
       marginBottom: 20,
     },
     passwordContainer: {
-      backgroundColor: '#e0e0e0',
+      backgroundColor: '#F0F4F8',
       width: '100%',
       height: 50,
       borderRadius: 5,
