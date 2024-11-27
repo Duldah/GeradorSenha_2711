@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
     },
     title: {
-      color:'#0A3856',
+      color:'#168990',
       fontWeight: 'bold',
       fontSize: 24,
       marginBottom: 20,
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
       padding: 10,    
     },
     passwordText:{
-      color: '#000',
+      color: '#0A3856',
       fontSize: 16,
     },
   });

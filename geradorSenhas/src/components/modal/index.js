@@ -44,7 +44,7 @@ export function ModalPassword({ senha, handleClose, salvarSenha }) {
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: "rgba(24, 24, 24, 0.6)",
+        backgroundColor: "#C6FFFF",
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
         padding: 8,
     },
     buttonSave: {
-        backgroundColor: "#392DE9",
+        backgroundColor: "#168990",
         borderRadius: 8,
     },
     buttonSaveText: {

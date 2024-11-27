@@ -29,14 +29,14 @@ export default function SenhaForte({ route }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F0F4F8',
+    backgroundColor: '#C6FFFF',
     alignItems: 'center',
     justifyContent: 'center',
   },
   title: {
     fontWeight: 'bold',
     fontSize: 24,
-    color: '#0A3856', 
+    color: '#168990', 
     marginBottom: 20,
     paddingLeft: 25,
     paddingRight: 25,
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
     textAlign: 'justify',
   },
   passwordContainer: {
-    backgroundColor: '#e0e0e0',
+    backgroundColor: '#66E0E0',
     width: '100%',
     height: 50,
     borderRadius: 5,

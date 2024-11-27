@@ -54,11 +54,11 @@ function HomeScreen({ navigation }) {
   return (
     <View style={styles.container}>
       <Image
-        source={require("./src/img/protecao.png")}
+        source={require("./src/img/lock.png")}
         style={styles.logo}
       />
 
-      <Text style={styles.title}> PowerLock </Text>
+      <Text style={styles.title}> LockSave </Text>
 
       <TouchableOpacity style={styles.button} onPress={gerarSenha}>
         <Text style={styles.textButton}> Gerar Senha </Text>
@@ -116,7 +116,7 @@ const styles = StyleSheet.create({
     marginBottom: 50,
   },
   button: {
-    backgroundColor: '#0A3856',
+    backgroundColor: '#168990',
     width: '70%',
     height: 50,
     alignItems: 'center',
